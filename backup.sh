@@ -1,16 +1,13 @@
 #!/bin/bash
 
 # Destination for the backup files
-destination=""
+destination="path/to/backup/dir"
 
 date="$(date +%Y-%m-%d_%H%M%S)"
 
 mkdir -p "$destination/backup-$date"
 
-# These are examples of directories to backup
-# The first part is the name of the folder
-# The second part is the directory
-# make sure there is no / in the beginning
+# Backup Directories
 declare -A directories=(
     ["home"]="home/"
     ["etc"]="etc/"
